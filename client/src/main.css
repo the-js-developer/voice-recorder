@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+
+  --transition-speed: 0.3s;
+}
+
+* {
+  @apply box-border transition-all duration-300;
+}
+
+body {
+  @apply bg-background-light text-gray-800 font-sans antialiased;
+}
+
+.btn {
+  @apply 
+    px-4 
+    py-2 
+    rounded-md 
+    font-semibold 
+    text-white 
+    uppercase 
+    tracking-wider 
+    focus:outline-none 
+    focus:ring-2 
+    focus:ring-opacity-50 
+    transform 
+    hover:scale-105 
+    disabled:opacity-50 
+    disabled:cursor-not-allowed;
+}
+
+.btn-primary {
+  @apply bg-brand-primary hover:bg-blue-600 focus:ring-blue-500;
+}
+
+.btn-secondary {
+  @apply bg-brand-secondary hover:bg-gray-600 focus:ring-gray-500;
+}
+
+.btn-success {
+  @apply bg-brand-success hover:bg-green-600 focus:ring-green-500;
+}
+
+.btn-danger {
+  @apply bg-brand-danger hover:bg-red-600 focus:ring-red-500;
+}
+
+.btn-warning {
+  @apply bg-brand-warning text-black hover:bg-yellow-600 focus:ring-yellow-500;
+}
